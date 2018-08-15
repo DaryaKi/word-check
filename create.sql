@@ -1,4 +1,14 @@
 CREATE DATABASE WordCheck
 ON PRIMARY
 (NAME = WordCheck,
-FILENAME
+FILENAME = /home/daryak/WordCheck
+SIZE = 5120KB,
+MAXSIZE = UNLIMITED,
+FILEGROWTH = 1024KB)
+LOG ON
+(NAME = WordCheck_log,
+FILENAME = '/home/daryak/WordCheck_log.ldf',
+SIZE = 2048KB,
+MAXSIZE = 2048GB,
+FILEGROWTH = 10%)
+GO
